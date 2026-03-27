@@ -240,6 +240,18 @@ body {
   background: #ffffff;
 }
 
+.selector-grid-size {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.selector-grid-size .thumb-button {
+  padding: 20px 12px;
+}
+
+.selector-grid-size .thumb-button span {
+  font-size: 18px;
+}
+
 .more-wrap {
   margin-top: 18px;
   text-align: center;
@@ -326,6 +338,10 @@ body {
   }
 
   .selector-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .selector-grid-size {
     grid-template-columns: 1fr;
   }
 
