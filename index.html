@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>草履シミュレーター</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <h1>草履シミュレーター</h1>
+      <p class="lead">鼻緒と台を選んで、お好みの組み合わせをお試しください。</p>
+    </header>
+
+    <main class="simulator">
+      <section class="preview-section">
+        <div class="preview">
+          <img id="dai" src="./images/dai/dai_01.png" alt="草履の台">
+          <img id="hanao" src="./images/hanao/hanao_01.png" alt="草履の鼻緒">
+        </div>
+
+        <div id="current-selection">
+          鼻緒：鼻緒 01 / 台：台 01
+        </div>
+      </section>
+
+      <section class="selector-section">
+        <div class="selector-block">
+          <div class="selector-header">
+            <h2>鼻緒を選ぶ</h2>
+            <p class="selector-subtext">カテゴリから絞り込んで選べます</p>
+          </div>
+
+          <div class="filter-bar">
+            <button type="button" class="filter-button active" onclick="filterHanao('all', this)">すべて</button>
+            <button type="button" class="filter-button" onclick="filterHanao('popular', this)">人気</button>
+            <button type="button" class="filter-button" onclick="filterHanao('gorgeous', this)">華やか</button>
+            <button type="button" class="filter-button" onclick="filterHanao('elegant', this)">上品</button>
+            <button type="button" class="filter-button" onclick="filterHanao('simple', this)">シンプル</button>
+            <button type="button" class="filter-button" onclick="filterHanao('cute', this)">かわいい</button>
+            <button type="button" class="filter-button" onclick="filterHanao('calm', this)">落ち着き</button>
+          </div>
+
+          <div id="hanao-grid" class="selector-grid"></div>
+
+          <div class="more-wrap">
+            <button type="button" id="more-button" class="more-button" onclick="showMoreHanao()">もっと見る</button>
+          </div>
+        </div>
+
+        <div class="selector-block">
+          <div class="selector-header">
+            <h2>台を選ぶ</h2>
+            <p class="selector-subtext">台を選んで組み合わせを確認できます</p>
+          </div>
+
+          <div id="dai-grid" class="selector-grid selector-grid-single selector-grid-dai"></div>
+        </div>
+
+        <div class="purchase-note">
+          <p>※楽天ページでサイズや組み合わせを選択してご購入ください</p>
+          <a href="https://www.rakuten.co.jp/" target="_blank" rel="noopener noreferrer" class="buy-btn">
+            この組み合わせを楽天で確認する
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
