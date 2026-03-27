@@ -44,8 +44,35 @@ const daiItems = [
   }
 ];
 
+const sizeItems = [
+  { id: "S", name: "S" },
+  { id: "M", name: "M" },
+  { id: "L", name: "L" }
+];
+
+const combinationUrls = {
+  "hanao_01_dai_01_S": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb64941a",
+  "hanao_01_dai_01_M": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb64942a",
+  "hanao_01_dai_01_L": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb64943a",
+  "hanao_02_dai_01_S": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb64944a",
+  "hanao_02_dai_01_M": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb64945a",
+  "hanao_02_dai_01_L": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb64946a",
+  "hanao_03_dai_01_S": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb64947a",
+  "hanao_03_dai_01_M": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb64948a",
+  "hanao_03_dai_01_L": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb64949a",
+  "hanao_04_dai_01_S": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb649410a",
+  "hanao_04_dai_01_M": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb649411a",
+  "hanao_04_dai_01_L": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb649412a",
+  "hanao_05_dai_01_S": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb649413a",
+  "hanao_05_dai_01_M": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb649414a",
+  "hanao_05_dai_01_L": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb649415a"
+};
+
+const fallbackUrl = "https://www.rakuten.co.jp/";
+
 let selectedHanao = hanaoItems[0].id;
 let selectedDai = daiItems[0].id;
+let selectedSize = sizeItems[0].id;
 let currentFilter = "all";
 let showAll = false;
 const initialVisibleCount = 6;
@@ -123,6 +150,29 @@ function renderDaiItems() {
   });
 }
 
+function renderSizeItems() {
+  const grid = document.getElementById("size-grid");
+  grid.innerHTML = "";
+
+  sizeItems.forEach(item => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "thumb-button";
+
+    if (item.id === selectedSize) {
+      button.classList.add("selected");
+    }
+
+    button.innerHTML = `<span>${item.name}</span>`;
+
+    button.addEventListener("click", function () {
+      changeSize(item.id);
+    });
+
+    grid.appendChild(button);
+  });
+}
+
 function changeHanao(id) {
   const item = hanaoItems.find(hanao => hanao.id === id);
   if (!item) return;
@@ -131,6 +181,7 @@ function changeHanao(id) {
   document.getElementById("hanao").src = item.image;
   renderHanaoItems();
   updateSelection();
+  updateBuyLink();
 }
 
 function changeDai(id) {
@@ -141,6 +192,14 @@ function changeDai(id) {
   document.getElementById("dai").src = item.image;
   renderDaiItems();
   updateSelection();
+  updateBuyLink();
+}
+
+function changeSize(id) {
+  selectedSize = id;
+  renderSizeItems();
+  updateSelection();
+  updateBuyLink();
 }
 
 function filterHanao(category, buttonEl) {
@@ -165,11 +224,24 @@ function updateSelection() {
   const selectedDaiItem = daiItems.find(item => item.id === selectedDai);
 
   document.getElementById("current-selection").innerText =
-    "鼻緒：" + selectedHanaoItem.name + " / 台：" + selectedDaiItem.name;
+    "鼻緒：" + selectedHanaoItem.name +
+    " / 台：" + selectedDaiItem.name +
+    " / サイズ：" + selectedSize;
+}
+
+function updateBuyLink() {
+  const key = `${selectedHanao}_${selectedDai}_${selectedSize}`;
+  const buyLink = document.getElementById("buy-link");
+
+  if (!buyLink) return;
+
+  buyLink.href = combinationUrls[key] || fallbackUrl;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   renderHanaoItems();
   renderDaiItems();
+  renderSizeItems();
   updateSelection();
+  updateBuyLink();
 });
