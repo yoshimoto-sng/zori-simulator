@@ -1,38 +1,276 @@
 const hanaoItems = [
   {
-    id: "hanao_01",
-    name: "鼻緒 01",
-    image: "./images/hanao/hanao_01.png",
+    id: "hanao_1",
+    name: "鼻緒 1",
+    image: "./images/hanao/1.jpg",
     category: ["popular", "cute"],
     categoryLabel: ["人気", "かわいい"]
   },
   {
-    id: "hanao_02",
-    name: "鼻緒 02",
-    image: "./images/hanao/hanao_02.png",
+    id: "hanao_2",
+    name: "鼻緒 2",
+    image: "./images/hanao/2.jpg",
     category: ["gorgeous", "popular"],
     categoryLabel: ["華やか", "人気"]
   },
   {
-    id: "hanao_03",
-    name: "鼻緒 03",
-    image: "./images/hanao/hanao_03.png",
+    id: "hanao_3",
+    name: "鼻緒 3",
+    image: "./images/hanao/3.jpg",
     category: ["elegant", "calm"],
     categoryLabel: ["上品", "落ち着き"]
   },
   {
-    id: "hanao_04",
-    name: "鼻緒 04",
-    image: "./images/hanao/hanao_04.png",
+    id: "hanao_4",
+    name: "鼻緒 4",
+    image: "./images/hanao/4.jpg",
     category: ["cute", "gorgeous"],
     categoryLabel: ["かわいい", "華やか"]
   },
   {
-    id: "hanao_05",
-    name: "鼻緒 05",
-    image: "./images/hanao/hanao_05.png",
+    id: "hanao_5",
+    name: "鼻緒 5",
+    image: "./images/hanao/5.jpg",
     category: ["simple", "calm"],
     categoryLabel: ["シンプル", "落ち着き"]
+  },
+  {
+    id: "hanao_6",
+    name: "鼻緒 6",
+    image: "./images/hanao/6.jpg",
+    category: ["popular", "simple"],
+    categoryLabel: ["人気", "シンプル"]
+  },
+  {
+    id: "hanao_7",
+    name: "鼻緒 7",
+    image: "./images/hanao/7.jpg",
+    category: ["elegant", "popular"],
+    categoryLabel: ["上品", "人気"]
+  },
+  {
+    id: "hanao_8",
+    name: "鼻緒 8",
+    image: "./images/hanao/8.jpg",
+    category: ["gorgeous", "cute"],
+    categoryLabel: ["華やか", "かわいい"]
+  },
+  {
+    id: "hanao_9",
+    name: "鼻緒 9",
+    image: "./images/hanao/9.jpg",
+    category: ["calm", "simple"],
+    categoryLabel: ["落ち着き", "シンプル"]
+  },
+  {
+    id: "hanao_10",
+    name: "鼻緒 10",
+    image: "./images/hanao/10.jpg",
+    category: ["popular", "gorgeous"],
+    categoryLabel: ["人気", "華やか"]
+  },
+  {
+    id: "hanao_11",
+    name: "鼻緒 11",
+    image: "./images/hanao/11.jpg",
+    category: ["elegant", "simple"],
+    categoryLabel: ["上品", "シンプル"]
+  },
+  {
+    id: "hanao_12",
+    name: "鼻緒 12",
+    image: "./images/hanao/12.jpg",
+    category: ["cute", "popular"],
+    categoryLabel: ["かわいい", "人気"]
+  },
+  {
+    id: "hanao_13",
+    name: "鼻緒 13",
+    image: "./images/hanao/13.jpg",
+    category: ["calm", "elegant"],
+    categoryLabel: ["落ち着き", "上品"]
+  },
+  {
+    id: "hanao_14",
+    name: "鼻緒 14",
+    image: "./images/hanao/14.jpg",
+    category: ["gorgeous", "popular"],
+    categoryLabel: ["華やか", "人気"]
+  },
+  {
+    id: "hanao_15",
+    name: "鼻緒 15",
+    image: "./images/hanao/15.jpg",
+    category: ["simple", "cute"],
+    categoryLabel: ["シンプル", "かわいい"]
+  },
+  {
+    id: "hanao_16",
+    name: "鼻緒 16",
+    image: "./images/hanao/16.jpg",
+    category: ["elegant", "gorgeous"],
+    categoryLabel: ["上品", "華やか"]
+  },
+  {
+    id: "hanao_17",
+    name: "鼻緒 17",
+    image: "./images/hanao/17.jpg",
+    category: ["popular", "calm"],
+    categoryLabel: ["人気", "落ち着き"]
+  },
+  {
+    id: "hanao_18",
+    name: "鼻緒 18",
+    image: "./images/hanao/18.jpg",
+    category: ["cute", "simple"],
+    categoryLabel: ["かわいい", "シンプル"]
+  },
+  {
+    id: "hanao_19",
+    name: "鼻緒 19",
+    image: "./images/hanao/19.jpg",
+    category: ["gorgeous", "elegant"],
+    categoryLabel: ["華やか", "上品"]
+  },
+  {
+    id: "hanao_20",
+    name: "鼻緒 20",
+    image: "./images/hanao/20.jpg",
+    category: ["popular", "simple"],
+    categoryLabel: ["人気", "シンプル"]
+  },
+  {
+    id: "hanao_21",
+    name: "鼻緒 21",
+    image: "./images/hanao/21.jpg",
+    category: ["calm", "cute"],
+    categoryLabel: ["落ち着き", "かわいい"]
+  },
+  {
+    id: "hanao_22",
+    name: "鼻緒 22",
+    image: "./images/hanao/22.jpg",
+    category: ["elegant", "popular"],
+    categoryLabel: ["上品", "人気"]
+  },
+  {
+    id: "hanao_23",
+    name: "鼻緒 23",
+    image: "./images/hanao/23.jpg",
+    category: ["gorgeous", "cute"],
+    categoryLabel: ["華やか", "かわいい"]
+  },
+  {
+    id: "hanao_24",
+    name: "鼻緒 24",
+    image: "./images/hanao/24.jpg",
+    category: ["simple", "calm"],
+    categoryLabel: ["シンプル", "落ち着き"]
+  },
+  {
+    id: "hanao_25",
+    name: "鼻緒 25",
+    image: "./images/hanao/25.jpg",
+    category: ["popular", "gorgeous"],
+    categoryLabel: ["人気", "華やか"]
+  },
+  {
+    id: "hanao_26",
+    name: "鼻緒 26",
+    image: "./images/hanao/26.jpg",
+    category: ["cute", "elegant"],
+    categoryLabel: ["かわいい", "上品"]
+  },
+  {
+    id: "hanao_27",
+    name: "鼻緒 27",
+    image: "./images/hanao/27.jpg",
+    category: ["calm", "simple"],
+    categoryLabel: ["落ち着き", "シンプル"]
+  },
+  {
+    id: "hanao_28",
+    name: "鼻緒 28",
+    image: "./images/hanao/28.jpg",
+    category: ["popular", "cute"],
+    categoryLabel: ["人気", "かわいい"]
+  },
+  {
+    id: "hanao_29",
+    name: "鼻緒 29",
+    image: "./images/hanao/29.jpg",
+    category: ["gorgeous", "calm"],
+    categoryLabel: ["華やか", "落ち着き"]
+  },
+  {
+    id: "hanao_30",
+    name: "鼻緒 30",
+    image: "./images/hanao/30.jpg",
+    category: ["elegant", "simple"],
+    categoryLabel: ["上品", "シンプル"]
+  },
+  {
+    id: "hanao_31",
+    name: "鼻緒 31",
+    image: "./images/hanao/31.jpg",
+    category: ["popular", "elegant"],
+    categoryLabel: ["人気", "上品"]
+  },
+  {
+    id: "hanao_32",
+    name: "鼻緒 32",
+    image: "./images/hanao/32.jpg",
+    category: ["cute", "gorgeous"],
+    categoryLabel: ["かわいい", "華やか"]
+  },
+  {
+    id: "hanao_33",
+    name: "鼻緒 33",
+    image: "./images/hanao/33.jpg",
+    category: ["calm", "popular"],
+    categoryLabel: ["落ち着き", "人気"]
+  },
+  {
+    id: "hanao_34",
+    name: "鼻緒 34",
+    image: "./images/hanao/34.jpg",
+    category: ["simple", "cute"],
+    categoryLabel: ["シンプル", "かわいい"]
+  },
+  {
+    id: "hanao_35",
+    name: "鼻緒 35",
+    image: "./images/hanao/35.jpg",
+    category: ["elegant", "gorgeous"],
+    categoryLabel: ["上品", "華やか"]
+  },
+  {
+    id: "hanao_36",
+    name: "鼻緒 36",
+    image: "./images/hanao/36.jpg",
+    category: ["popular", "simple"],
+    categoryLabel: ["人気", "シンプル"]
+  },
+  {
+    id: "hanao_37",
+    name: "鼻緒 37",
+    image: "./images/hanao/37.jpg",
+    category: ["cute", "calm"],
+    categoryLabel: ["かわいい", "落ち着き"]
+  },
+  {
+    id: "hanao_38",
+    name: "鼻緒 38",
+    image: "./images/hanao/38.jpg",
+    category: ["gorgeous", "popular"],
+    categoryLabel: ["華やか", "人気"]
+  },
+  {
+    id: "hanao_39",
+    name: "鼻緒 39",
+    image: "./images/hanao/39.jpg",
+    category: ["elegant", "calm"],
+    categoryLabel: ["上品", "落ち着き"]
   }
 ];
 
@@ -51,21 +289,123 @@ const sizeItems = [
 ];
 
 const combinationUrls = {
-  "hanao_01_dai_01_S": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb64941a",
-  "hanao_01_dai_01_M": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb64942a",
-  "hanao_01_dai_01_L": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb64943a",
-  "hanao_02_dai_01_S": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb64944a",
-  "hanao_02_dai_01_M": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb64945a",
-  "hanao_02_dai_01_L": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb64946a",
-  "hanao_03_dai_01_S": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb64947a",
-  "hanao_03_dai_01_M": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb64948a",
-  "hanao_03_dai_01_L": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb64949a",
-  "hanao_04_dai_01_S": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb649410a",
-  "hanao_04_dai_01_M": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb649411a",
-  "hanao_04_dai_01_L": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb649412a",
-  "hanao_05_dai_01_S": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb649413a",
-  "hanao_05_dai_01_M": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb649414a",
-  "hanao_05_dai_01_L": "https://item.rakuten.co.jp/yamako-02/td35eb6494/?variantId=td35eb649415a"
+  "hanao_1_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_1_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_1_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_2_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_2_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_2_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_3_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_3_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_3_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_4_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_4_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_4_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_5_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_5_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_5_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_6_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_6_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_6_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_7_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_7_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_7_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_8_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_8_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_8_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_9_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_9_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_9_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_10_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_10_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_10_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_11_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_11_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_11_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_12_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_12_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_12_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_13_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_13_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_13_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_14_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_14_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_14_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_15_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_15_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_15_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_16_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_16_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_16_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_17_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_17_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_17_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_18_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_18_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_18_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_19_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_19_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_19_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_20_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_20_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_20_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_21_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_21_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_21_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_22_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_22_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_22_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_23_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_23_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_23_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_24_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_24_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_24_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_25_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_25_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_25_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_26_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_26_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_26_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_27_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_27_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_27_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_28_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_28_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_28_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_29_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_29_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_29_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_30_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_30_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_30_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_31_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_31_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_31_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_32_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_32_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_32_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_33_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_33_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_33_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_34_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_34_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_34_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_35_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_35_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_35_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_36_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_36_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_36_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_37_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_37_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_37_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_38_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_38_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_38_dai_01_L": "https://www.rakuten.co.jp/",
+  "hanao_39_dai_01_S": "https://www.rakuten.co.jp/",
+  "hanao_39_dai_01_M": "https://www.rakuten.co.jp/",
+  "hanao_39_dai_01_L": "https://www.rakuten.co.jp/"
 };
 
 const fallbackUrl = "https://www.rakuten.co.jp/";
