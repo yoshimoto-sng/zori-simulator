@@ -197,6 +197,83 @@ function getFilteredDaiItems() {
   return daiItems.filter(item => item.category.includes(currentDaiFilter));
 }
 
+function updateHanaoFilterCounts() {
+  const countMap = {
+    all: hanaoItems.length,
+    gorgeous: hanaoItems.filter(item => item.category.includes("gorgeous")).length,
+    elegant: hanaoItems.filter(item => item.category.includes("elegant")).length,
+    simple: hanaoItems.filter(item => item.category.includes("simple")).length,
+    cute: hanaoItems.filter(item => item.category.includes("cute")).length,
+    calm: hanaoItems.filter(item => item.category.includes("calm")).length
+  };
+
+  const buttons = document.querySelectorAll(".selector-block:nth-of-type(1) .filter-button");
+
+  buttons.forEach(button => {
+    const onclickText = button.getAttribute("onclick") || "";
+
+    if (onclickText.includes("filterHanao('all'")) {
+      button.textContent = `すべて(${countMap.all})`;
+    } else if (onclickText.includes("filterHanao('gorgeous'")) {
+      button.textContent = `華やか(${countMap.gorgeous})`;
+    } else if (onclickText.includes("filterHanao('elegant'")) {
+      button.textContent = `上品(${countMap.elegant})`;
+    } else if (onclickText.includes("filterHanao('simple'")) {
+      button.textContent = `シンプル(${countMap.simple})`;
+    } else if (onclickText.includes("filterHanao('cute'")) {
+      button.textContent = `かわいい(${countMap.cute})`;
+    } else if (onclickText.includes("filterHanao('calm'")) {
+      button.textContent = `落ち着き(${countMap.calm})`;
+    }
+  });
+}
+
+function updateDaiFilterCounts() {
+  const countMap = {
+    all: daiItems.length,
+    black: daiItems.filter(item => item.category.includes("black")).length,
+    white: daiItems.filter(item => item.category.includes("white")).length,
+    gray: daiItems.filter(item => item.category.includes("gray")).length,
+    beige: daiItems.filter(item => item.category.includes("beige")).length,
+    red: daiItems.filter(item => item.category.includes("red")).length,
+    orange: daiItems.filter(item => item.category.includes("orange")).length,
+    brown: daiItems.filter(item => item.category.includes("brown")).length,
+    pink: daiItems.filter(item => item.category.includes("pink")).length,
+    blue: daiItems.filter(item => item.category.includes("blue")).length,
+    green: daiItems.filter(item => item.category.includes("green")).length
+  };
+
+  const buttons = document.querySelectorAll(".selector-block:nth-of-type(2) .filter-button");
+
+  buttons.forEach(button => {
+    const onclickText = button.getAttribute("onclick") || "";
+
+    if (onclickText.includes("filterDai('all'")) {
+      button.textContent = `すべて(${countMap.all})`;
+    } else if (onclickText.includes("filterDai('black'")) {
+      button.textContent = `黒系(${countMap.black})`;
+    } else if (onclickText.includes("filterDai('white'")) {
+      button.textContent = `白系(${countMap.white})`;
+    } else if (onclickText.includes("filterDai('gray'")) {
+      button.textContent = `グレー系(${countMap.gray})`;
+    } else if (onclickText.includes("filterDai('beige'")) {
+      button.textContent = `ベージュ系(${countMap.beige})`;
+    } else if (onclickText.includes("filterDai('red'")) {
+      button.textContent = `赤系(${countMap.red})`;
+    } else if (onclickText.includes("filterDai('orange'")) {
+      button.textContent = `オレンジ系(${countMap.orange})`;
+    } else if (onclickText.includes("filterDai('brown'")) {
+      button.textContent = `ブラウン系(${countMap.brown})`;
+    } else if (onclickText.includes("filterDai('pink'")) {
+      button.textContent = `ピンク系(${countMap.pink})`;
+    } else if (onclickText.includes("filterDai('blue'")) {
+      button.textContent = `青系(${countMap.blue})`;
+    } else if (onclickText.includes("filterDai('green'")) {
+      button.textContent = `緑系(${countMap.green})`;
+    }
+  });
+}
+
 function renderHanaoItems() {
   const grid = document.getElementById("hanao-grid");
   const moreButton = document.getElementById("more-button");
@@ -388,7 +465,7 @@ function generateProductCode() {
   if (!hanao || !dai || !soko || !size) return "";
 
   const daiCode = daiCodeMap[dai.id] || "";
-  const sizeCode = size.id; // S / M / L
+  const sizeCode = size.id;
   const hanaoNum = String(hanao.rank).padStart(2, "0");
   const sokoNum = String(soko.rank);
 
@@ -458,6 +535,8 @@ function updateBuyLink() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  updateHanaoFilterCounts();
+  updateDaiFilterCounts();
   renderHanaoItems();
   renderDaiItems();
   renderSokoItems();
