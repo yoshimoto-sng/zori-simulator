@@ -10,18 +10,23 @@
   <div class="page">
     <header class="hero">
       <h1>草履シミュレーター</h1>
-      <p class="lead">鼻緒と台を選んで、お好みの組み合わせをお試しください。</p>
+      <p class="lead">鼻緒と天生地と台を選んで、お好みの組み合わせをお試しください。</p>
     </header>
 
     <main class="simulator">
       <section class="preview-section">
         <div class="preview">
-          <img id="dai" src="./images/dai/dai_01.png" alt="草履の台">
-          <img id="hanao" src="./images/hanao/1.jpg" alt="草履の鼻緒">
+          <img id="soko" src="./images/soko/1.png" alt="草履の台">
+          <img id="dai" src="./images/dai/1.png" alt="草履の天生地">
+          <img id="hanao" src="./images/hanao/1.png" alt="草履の鼻緒">
         </div>
 
         <div id="current-selection">
-          鼻緒：鼻緒 1 / 台：台 01 / サイズ：S
+          鼻緒：蔓小花(ピンク) / 天生地：墨織市松 / 台：アイボリー / サイズ：S
+        </div>
+
+        <div id="product-code" class="product-code">
+          品番：01608111
         </div>
       </section>
 
@@ -34,7 +39,6 @@
 
           <div class="filter-bar">
             <button type="button" class="filter-button active" onclick="filterHanao('all', this)">すべて</button>
-            <button type="button" class="filter-button" onclick="filterHanao('popular', this)">人気</button>
             <button type="button" class="filter-button" onclick="filterHanao('gorgeous', this)">華やか</button>
             <button type="button" class="filter-button" onclick="filterHanao('elegant', this)">上品</button>
             <button type="button" class="filter-button" onclick="filterHanao('simple', this)">シンプル</button>
@@ -51,11 +55,38 @@
 
         <div class="selector-block">
           <div class="selector-header">
-            <h2>台を選ぶ</h2>
-            <p class="selector-subtext">台を選んで組み合わせを確認できます</p>
+            <h2>「天」生地を選ぶ</h2>
+            <p class="selector-subtext">足を乗せていただくところの生地</p>
           </div>
 
-          <div id="dai-grid" class="selector-grid selector-grid-single selector-grid-dai"></div>
+          <div class="filter-bar">
+            <button type="button" class="filter-button filter-dai-all active" onclick="filterDai('all', this)">すべて</button>
+            <button type="button" class="filter-button filter-dai-black" onclick="filterDai('black', this)">黒系</button>
+            <button type="button" class="filter-button filter-dai-white" onclick="filterDai('white', this)">白系</button>
+            <button type="button" class="filter-button filter-dai-gray" onclick="filterDai('gray', this)">グレー系</button>
+            <button type="button" class="filter-button filter-dai-beige" onclick="filterDai('beige', this)">ベージュ系</button>
+            <button type="button" class="filter-button filter-dai-red" onclick="filterDai('red', this)">赤系</button>
+            <button type="button" class="filter-button filter-dai-orange" onclick="filterDai('orange', this)">オレンジ系</button>
+            <button type="button" class="filter-button filter-dai-brown" onclick="filterDai('brown', this)">ブラウン系</button>
+            <button type="button" class="filter-button filter-dai-pink" onclick="filterDai('pink', this)">ピンク系</button>
+            <button type="button" class="filter-button filter-dai-blue" onclick="filterDai('blue', this)">青系</button>
+            <button type="button" class="filter-button filter-dai-green" onclick="filterDai('green', this)">緑系</button>
+          </div>
+
+          <div id="dai-grid" class="selector-grid selector-grid-dai"></div>
+
+          <div class="more-wrap">
+            <button type="button" id="more-button-dai" class="more-button" onclick="showMoreDai()">もっと見る</button>
+          </div>
+        </div>
+
+        <div class="selector-block">
+          <div class="selector-header">
+            <h2>台を選ぶ</h2>
+            <p class="selector-subtext">色から選択してください</p>
+          </div>
+
+          <div id="soko-grid" class="selector-grid selector-grid-soko"></div>
         </div>
 
         <div class="selector-block">
@@ -68,8 +99,8 @@
         </div>
 
         <div class="purchase-note">
-          <p>※楽天ページでサイズや組み合わせを選択してご購入ください</p>
-          <a id="buy-link" href="https://www.rakuten.co.jp/" target="_blank" rel="noopener noreferrer" class="buy-btn">
+          <p>※楽天ページで備考欄などに品番を貼り付けてご確認ください</p>
+          <a id="buy-link" href="https://item.rakuten.co.jp/yamako-02/td35eb6494/" target="_blank" rel="noopener noreferrer" class="buy-btn">
             この組み合わせを楽天で確認する
           </a>
         </div>
@@ -77,6 +108,6 @@
     </main>
   </div>
 
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
