@@ -1,427 +1,200 @@
+const hanaoExt = "png";
+const daiExt = "png";
+const sokoExt = "png";
+
+/* ===== 鼻緒データ ===== */
 const hanaoItems = [
-  {
-    id: "hanao_1",
-    name: "鼻緒 1",
-    image: "./images/hanao/1.jpg",
-    category: ["popular", "cute"],
-    categoryLabel: ["人気", "かわいい"]
-  },
-  {
-    id: "hanao_2",
-    name: "鼻緒 2",
-    image: "./images/hanao/2.jpg",
-    category: ["gorgeous", "popular"],
-    categoryLabel: ["華やか", "人気"]
-  },
-  {
-    id: "hanao_3",
-    name: "鼻緒 3",
-    image: "./images/hanao/3.jpg",
-    category: ["elegant", "calm"],
-    categoryLabel: ["上品", "落ち着き"]
-  },
-  {
-    id: "hanao_4",
-    name: "鼻緒 4",
-    image: "./images/hanao/4.jpg",
-    category: ["cute", "gorgeous"],
-    categoryLabel: ["かわいい", "華やか"]
-  },
-  {
-    id: "hanao_5",
-    name: "鼻緒 5",
-    image: "./images/hanao/5.jpg",
-    category: ["simple", "calm"],
-    categoryLabel: ["シンプル", "落ち着き"]
-  },
-  {
-    id: "hanao_6",
-    name: "鼻緒 6",
-    image: "./images/hanao/6.jpg",
-    category: ["popular", "simple"],
-    categoryLabel: ["人気", "シンプル"]
-  },
-  {
-    id: "hanao_7",
-    name: "鼻緒 7",
-    image: "./images/hanao/7.jpg",
-    category: ["elegant", "popular"],
-    categoryLabel: ["上品", "人気"]
-  },
-  {
-    id: "hanao_8",
-    name: "鼻緒 8",
-    image: "./images/hanao/8.jpg",
-    category: ["gorgeous", "cute"],
-    categoryLabel: ["華やか", "かわいい"]
-  },
-  {
-    id: "hanao_9",
-    name: "鼻緒 9",
-    image: "./images/hanao/9.jpg",
-    category: ["calm", "simple"],
-    categoryLabel: ["落ち着き", "シンプル"]
-  },
-  {
-    id: "hanao_10",
-    name: "鼻緒 10",
-    image: "./images/hanao/10.jpg",
-    category: ["popular", "gorgeous"],
-    categoryLabel: ["人気", "華やか"]
-  },
-  {
-    id: "hanao_11",
-    name: "鼻緒 11",
-    image: "./images/hanao/11.jpg",
-    category: ["elegant", "simple"],
-    categoryLabel: ["上品", "シンプル"]
-  },
-  {
-    id: "hanao_12",
-    name: "鼻緒 12",
-    image: "./images/hanao/12.jpg",
-    category: ["cute", "popular"],
-    categoryLabel: ["かわいい", "人気"]
-  },
-  {
-    id: "hanao_13",
-    name: "鼻緒 13",
-    image: "./images/hanao/13.jpg",
-    category: ["calm", "elegant"],
-    categoryLabel: ["落ち着き", "上品"]
-  },
-  {
-    id: "hanao_14",
-    name: "鼻緒 14",
-    image: "./images/hanao/14.jpg",
-    category: ["gorgeous", "popular"],
-    categoryLabel: ["華やか", "人気"]
-  },
-  {
-    id: "hanao_15",
-    name: "鼻緒 15",
-    image: "./images/hanao/15.jpg",
-    category: ["simple", "cute"],
-    categoryLabel: ["シンプル", "かわいい"]
-  },
-  {
-    id: "hanao_16",
-    name: "鼻緒 16",
-    image: "./images/hanao/16.jpg",
-    category: ["elegant", "gorgeous"],
-    categoryLabel: ["上品", "華やか"]
-  },
-  {
-    id: "hanao_17",
-    name: "鼻緒 17",
-    image: "./images/hanao/17.jpg",
-    category: ["popular", "calm"],
-    categoryLabel: ["人気", "落ち着き"]
-  },
-  {
-    id: "hanao_18",
-    name: "鼻緒 18",
-    image: "./images/hanao/18.jpg",
-    category: ["cute", "simple"],
-    categoryLabel: ["かわいい", "シンプル"]
-  },
-  {
-    id: "hanao_19",
-    name: "鼻緒 19",
-    image: "./images/hanao/19.jpg",
-    category: ["gorgeous", "elegant"],
-    categoryLabel: ["華やか", "上品"]
-  },
-  {
-    id: "hanao_20",
-    name: "鼻緒 20",
-    image: "./images/hanao/20.jpg",
-    category: ["popular", "simple"],
-    categoryLabel: ["人気", "シンプル"]
-  },
-  {
-    id: "hanao_21",
-    name: "鼻緒 21",
-    image: "./images/hanao/21.jpg",
-    category: ["calm", "cute"],
-    categoryLabel: ["落ち着き", "かわいい"]
-  },
-  {
-    id: "hanao_22",
-    name: "鼻緒 22",
-    image: "./images/hanao/22.jpg",
-    category: ["elegant", "popular"],
-    categoryLabel: ["上品", "人気"]
-  },
-  {
-    id: "hanao_23",
-    name: "鼻緒 23",
-    image: "./images/hanao/23.jpg",
-    category: ["gorgeous", "cute"],
-    categoryLabel: ["華やか", "かわいい"]
-  },
-  {
-    id: "hanao_24",
-    name: "鼻緒 24",
-    image: "./images/hanao/24.jpg",
-    category: ["simple", "calm"],
-    categoryLabel: ["シンプル", "落ち着き"]
-  },
-  {
-    id: "hanao_25",
-    name: "鼻緒 25",
-    image: "./images/hanao/25.jpg",
-    category: ["popular", "gorgeous"],
-    categoryLabel: ["人気", "華やか"]
-  },
-  {
-    id: "hanao_26",
-    name: "鼻緒 26",
-    image: "./images/hanao/26.jpg",
-    category: ["cute", "elegant"],
-    categoryLabel: ["かわいい", "上品"]
-  },
-  {
-    id: "hanao_27",
-    name: "鼻緒 27",
-    image: "./images/hanao/27.jpg",
-    category: ["calm", "simple"],
-    categoryLabel: ["落ち着き", "シンプル"]
-  },
-  {
-    id: "hanao_28",
-    name: "鼻緒 28",
-    image: "./images/hanao/28.jpg",
-    category: ["popular", "cute"],
-    categoryLabel: ["人気", "かわいい"]
-  },
-  {
-    id: "hanao_29",
-    name: "鼻緒 29",
-    image: "./images/hanao/29.jpg",
-    category: ["gorgeous", "calm"],
-    categoryLabel: ["華やか", "落ち着き"]
-  },
-  {
-    id: "hanao_30",
-    name: "鼻緒 30",
-    image: "./images/hanao/30.jpg",
-    category: ["elegant", "simple"],
-    categoryLabel: ["上品", "シンプル"]
-  },
-  {
-    id: "hanao_31",
-    name: "鼻緒 31",
-    image: "./images/hanao/31.jpg",
-    category: ["popular", "elegant"],
-    categoryLabel: ["人気", "上品"]
-  },
-  {
-    id: "hanao_32",
-    name: "鼻緒 32",
-    image: "./images/hanao/32.jpg",
-    category: ["cute", "gorgeous"],
-    categoryLabel: ["かわいい", "華やか"]
-  },
-  {
-    id: "hanao_33",
-    name: "鼻緒 33",
-    image: "./images/hanao/33.jpg",
-    category: ["calm", "popular"],
-    categoryLabel: ["落ち着き", "人気"]
-  },
-  {
-    id: "hanao_34",
-    name: "鼻緒 34",
-    image: "./images/hanao/34.jpg",
-    category: ["simple", "cute"],
-    categoryLabel: ["シンプル", "かわいい"]
-  },
-  {
-    id: "hanao_35",
-    name: "鼻緒 35",
-    image: "./images/hanao/35.jpg",
-    category: ["elegant", "gorgeous"],
-    categoryLabel: ["上品", "華やか"]
-  },
-  {
-    id: "hanao_36",
-    name: "鼻緒 36",
-    image: "./images/hanao/36.jpg",
-    category: ["popular", "simple"],
-    categoryLabel: ["人気", "シンプル"]
-  },
-  {
-    id: "hanao_37",
-    name: "鼻緒 37",
-    image: "./images/hanao/37.jpg",
-    category: ["cute", "calm"],
-    categoryLabel: ["かわいい", "落ち着き"]
-  },
-  {
-    id: "hanao_38",
-    name: "鼻緒 38",
-    image: "./images/hanao/38.jpg",
-    category: ["gorgeous", "popular"],
-    categoryLabel: ["華やか", "人気"]
-  },
-  {
-    id: "hanao_39",
-    name: "鼻緒 39",
-    image: "./images/hanao/39.jpg",
-    category: ["elegant", "calm"],
-    categoryLabel: ["上品", "落ち着き"]
-  }
+  { id: "hanao_1", name: "蔓小花(ピンク)", image: `./images/hanao/1.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 1 },
+  { id: "hanao_7", name: "蔓小花(ブルー)", image: `./images/hanao/7.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 2 },
+  { id: "hanao_11", name: "蔓小花(パープル)", image: `./images/hanao/11.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 3 },
+
+  { id: "hanao_2", name: "かすれ格子(ブルー)", image: `./images/hanao/2.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 4 },
+  { id: "hanao_4", name: "かすれ格子(アズキ)", image: `./images/hanao/4.${hanaoExt}`, category: ["simple"], categoryLabel: ["シンプル"], rank: 5 },
+
+  { id: "hanao_5", name: "やわらぎ織り(グリーン)", image: `./images/hanao/5.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 6 },
+  { id: "hanao_14", name: "やわらぎ織り(パープル)", image: `./images/hanao/14.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 7 },
+  { id: "hanao_15", name: "やわらぎ織り(ライトブルー)", image: `./images/hanao/15.${hanaoExt}`, category: ["simple"], categoryLabel: ["シンプル"], rank: 8 },
+
+  { id: "hanao_22", name: "結花(ベージュ)", image: `./images/hanao/22.${hanaoExt}`, category: ["gorgeous"], categoryLabel: ["華やか"], rank: 9 },
+  { id: "hanao_27", name: "結花(ブルー)", image: `./images/hanao/27.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 10 },
+  { id: "hanao_28", name: "結花(グリーン)", image: `./images/hanao/28.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 11 },
+
+  { id: "hanao_23", name: "和らぎ結び(ベージュ)", image: `./images/hanao/23.${hanaoExt}`, category: ["gorgeous"], categoryLabel: ["華やか"], rank: 12 },
+  { id: "hanao_25", name: "和らぎ結び(ピンク)", image: `./images/hanao/25.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 13 },
+  { id: "hanao_29", name: "和らぎ結び(ワイン)", image: `./images/hanao/29.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 14 },
+
+  { id: "hanao_33", name: "透かし織り(ブラウン)", image: `./images/hanao/33.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 15 },
+  { id: "hanao_34", name: "透かし織り(シルバー)", image: `./images/hanao/34.${hanaoExt}`, category: ["gorgeous"], categoryLabel: ["華やか"], rank: 16 },
+  { id: "hanao_36", name: "透かし織り", image: `./images/hanao/36.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 17 },
+
+  { id: "hanao_37", name: "宵透(ネイビー)", image: `./images/hanao/37.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 18 },
+  { id: "hanao_38", name: "宵透(ブラック)", image: `./images/hanao/38.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 19 },
+
+  { id: "hanao_3", name: "金彩麻の葉", image: `./images/hanao/3.${hanaoExt}`, category: ["simple"], categoryLabel: ["シンプル"], rank: 20 },
+  { id: "hanao_13", name: "銀彩麻の葉", image: `./images/hanao/13.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 21 },
+
+  { id: "hanao_6", name: "金彩更紗", image: `./images/hanao/6.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 22 },
+  { id: "hanao_9", name: "銀彩更紗", image: `./images/hanao/9.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 23 },
+
+  { id: "hanao_10", name: "ストライプ(グリーン)", image: `./images/hanao/10.${hanaoExt}`, category: ["gorgeous"], categoryLabel: ["華やか"], rank: 24 },
+  { id: "hanao_12", name: "ストライプ(ピンク)", image: `./images/hanao/12.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 25 },
+
+  { id: "hanao_8", name: "淡縞", image: `./images/hanao/8.${hanaoExt}`, category: ["simple"], categoryLabel: ["シンプル"], rank: 26 },
+  { id: "hanao_16", name: "白妙", image: `./images/hanao/16.${hanaoExt}`, category: ["simple"], categoryLabel: ["シンプル"], rank: 27 },
+  { id: "hanao_17", name: "白銀", image: `./images/hanao/17.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 28 },
+  { id: "hanao_18", name: "深茶", image: `./images/hanao/18.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 29 },
+  { id: "hanao_19", name: "生成", image: `./images/hanao/19.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 30 },
+  { id: "hanao_20", name: "漆黒", image: `./images/hanao/20.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 31 },
+
+  { id: "hanao_21", name: "絢爛花", image: `./images/hanao/21.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 32 },
+  { id: "hanao_24", name: "しらべ花", image: `./images/hanao/24.${hanaoExt}`, category: ["gorgeous"], categoryLabel: ["華やか"], rank: 33 },
+  { id: "hanao_26", name: "優彩花", image: `./images/hanao/26.${hanaoExt}`, category: ["gorgeous"], categoryLabel: ["華やか"], rank: 34 },
+  { id: "hanao_30", name: "深彩花", image: `./images/hanao/30.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 35 },
+  { id: "hanao_31", name: "彩陽花", image: `./images/hanao/31.${hanaoExt}`, category: ["gorgeous"], categoryLabel: ["華やか"], rank: 36 },
+
+  { id: "hanao_32", name: "白光織り", image: `./images/hanao/32.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 37 },
+  { id: "hanao_35", name: "漆黒織り", image: `./images/hanao/35.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 38 },
+  { id: "hanao_39", name: "木陰", image: `./images/hanao/39.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 39 }
 ];
 
+/* ===== 天データ ===== */
 const daiItems = [
-  {
-    id: "dai_01",
-    name: "台 01",
-    image: "./images/dai/dai_01.png"
-  }
+  { id: "dai_1",  name: "墨織市松", image: `./images/dai/1.${daiExt}`,  category: ["black"],  categoryLabel: ["黒系"],       rank: 1 },
+  { id: "dai_2",  name: "黒和光",   image: `./images/dai/2.${daiExt}`,  category: ["black"],  categoryLabel: ["黒系"],       rank: 2 },
+  { id: "dai_3",  name: "藍織",     image: `./images/dai/3.${daiExt}`,  category: ["black"],  categoryLabel: ["黒系"],       rank: 3 },
+  { id: "dai_4",  name: "墨霞",     image: `./images/dai/4.${daiExt}`,  category: ["black"],  categoryLabel: ["黒系"],       rank: 4 },
+  { id: "dai_6",  name: "墨彫",     image: `./images/dai/6.${daiExt}`,  category: ["black"],  categoryLabel: ["黒系"],       rank: 5 },
+  { id: "dai_7",  name: "黒シボ",   image: `./images/dai/7.${daiExt}`,  category: ["black"],  categoryLabel: ["黒系"],       rank: 6 },
+
+  { id: "dai_8",  name: "淡灰",     image: `./images/dai/8.${daiExt}`,  category: ["gray"],   categoryLabel: ["グレー系"],   rank: 7 },
+  { id: "dai_13", name: "白鼠",     image: `./images/dai/13.${daiExt}`, category: ["gray"],   categoryLabel: ["グレー系"],   rank: 8 },
+  { id: "dai_14", name: "銀霞",     image: `./images/dai/14.${daiExt}`, category: ["gray"],   categoryLabel: ["グレー系"],   rank: 9 },
+  { id: "dai_15", name: "織霞",     image: `./images/dai/15.${daiExt}`, category: ["gray"],   categoryLabel: ["グレー系"],   rank: 10 },
+
+  { id: "dai_20", name: "白和光",   image: `./images/dai/20.${daiExt}`, category: ["white"],  categoryLabel: ["白系"],       rank: 11 },
+  { id: "dai_21", name: "静白",     image: `./images/dai/21.${daiExt}`, category: ["white"],  categoryLabel: ["白系"],       rank: 12 },
+
+  { id: "dai_9",  name: "淡和光",   image: `./images/dai/9.${daiExt}`,  category: ["beige"],  categoryLabel: ["ベージュ系"], rank: 13 },
+  { id: "dai_10", name: "生成",     image: `./images/dai/10.${daiExt}`, category: ["beige"],  categoryLabel: ["ベージュ系"], rank: 14 },
+  { id: "dai_11", name: "白木目",   image: `./images/dai/11.${daiExt}`, category: ["beige"],  categoryLabel: ["ベージュ系"], rank: 15 },
+  { id: "dai_12", name: "白麻",     image: `./images/dai/12.${daiExt}`, category: ["beige"],  categoryLabel: ["ベージュ系"], rank: 16 },
+  { id: "dai_22", name: "淡生成",   image: `./images/dai/22.${daiExt}`, category: ["beige"],  categoryLabel: ["ベージュ系"], rank: 17 },
+  { id: "dai_23", name: "淡彫",     image: `./images/dai/23.${daiExt}`, category: ["beige"],  categoryLabel: ["ベージュ系"], rank: 18 },
+  { id: "dai_40", name: "淡黄",     image: `./images/dai/40.${daiExt}`, category: ["beige"],  categoryLabel: ["ベージュ系"], rank: 19 },
+
+  { id: "dai_16", name: "淡桜",     image: `./images/dai/16.${daiExt}`, category: ["pink"],   categoryLabel: ["ピンク系"],   rank: 20 },
+  { id: "dai_17", name: "薄桜",     image: `./images/dai/17.${daiExt}`, category: ["pink"],   categoryLabel: ["ピンク系"],   rank: 21 },
+  { id: "dai_19", name: "白桜",     image: `./images/dai/19.${daiExt}`, category: ["pink"],   categoryLabel: ["ピンク系"],   rank: 22 },
+  { id: "dai_38", name: "灰桜",     image: `./images/dai/38.${daiExt}`, category: ["pink"],   categoryLabel: ["ピンク系"],   rank: 23 },
+  { id: "dai_18", name: "紅織",     image: `./images/dai/18.${daiExt}`, category: ["pink"],   categoryLabel: ["ピンク系"],   rank: 24 },
+
+  { id: "dai_24", name: "古彩",     image: `./images/dai/24.${daiExt}`, category: ["brown"],  categoryLabel: ["ブラウン系"], rank: 25 },
+  { id: "dai_25", name: "胡桃織",   image: `./images/dai/25.${daiExt}`, category: ["brown"],  categoryLabel: ["ブラウン系"], rank: 26 },
+  { id: "dai_26", name: "陽織",     image: `./images/dai/26.${daiExt}`, category: ["brown"],  categoryLabel: ["ブラウン系"], rank: 27 },
+  { id: "dai_27", name: "淡香",     image: `./images/dai/27.${daiExt}`, category: ["brown"],  categoryLabel: ["ブラウン系"], rank: 28 },
+
+  { id: "dai_28", name: "紅和光",   image: `./images/dai/28.${daiExt}`, category: ["red"],    categoryLabel: ["赤系"],       rank: 29 },
+  { id: "dai_29", name: "深紅",     image: `./images/dai/29.${daiExt}`, category: ["red"],    categoryLabel: ["赤系"],       rank: 30 },
+  { id: "dai_30", name: "紅霞",     image: `./images/dai/30.${daiExt}`, category: ["red"],    categoryLabel: ["赤系"],       rank: 31 },
+  { id: "dai_31", name: "薄藤",     image: `./images/dai/31.${daiExt}`, category: ["red"],    categoryLabel: ["赤系"],       rank: 32 },
+
+  { id: "dai_32", name: "素灰",     image: `./images/dai/32.${daiExt}`, category: ["green"],  categoryLabel: ["緑系"],       rank: 33 },
+  { id: "dai_33", name: "青霞",     image: `./images/dai/33.${daiExt}`, category: ["green"],  categoryLabel: ["緑系"],       rank: 34 },
+  { id: "dai_34", name: "若葉霞",   image: `./images/dai/34.${daiExt}`, category: ["green"],  categoryLabel: ["緑系"],       rank: 35 },
+
+  { id: "dai_5",  name: "鉛灰",     image: `./images/dai/5.${daiExt}`,  category: ["blue"],   categoryLabel: ["青系"],       rank: 36 },
+  { id: "dai_35", name: "藍鉄",     image: `./images/dai/35.${daiExt}`, category: ["blue"],   categoryLabel: ["青系"],       rank: 37 },
+  { id: "dai_36", name: "空霞",     image: `./images/dai/36.${daiExt}`, category: ["blue"],   categoryLabel: ["青系"],       rank: 38 },
+  { id: "dai_37", name: "水霞",     image: `./images/dai/37.${daiExt}`, category: ["blue"],   categoryLabel: ["青系"],       rank: 39 },
+
+  { id: "dai_39", name: "橙霞",     image: `./images/dai/39.${daiExt}`, category: ["orange"], categoryLabel: ["オレンジ系"], rank: 40 }
+];
+
+/* ===== 台データ ===== */
+const sokoItems = [
+  { id: "soko_1", name: "アイボリー", image: `./images/soko/1.${sokoExt}`, colorClass: "ivory", rank: 1 },
+  { id: "soko_2", name: "薄グレー", image: `./images/soko/2.${sokoExt}`, colorClass: "lightgray", rank: 2 },
+  { id: "soko_3", name: "ココア", image: `./images/soko/3.${sokoExt}`, colorClass: "cocoa", rank: 3 },
+  { id: "soko_4", name: "ブラック", image: `./images/soko/4.${sokoExt}`, colorClass: "black", rank: 4 }
 ];
 
 const sizeItems = [
-  { id: "S", name: "S" },
-  { id: "M", name: "M" },
-  { id: "L", name: "L" }
+  { id: "S", name: "S", code: "1" },
+  { id: "M", name: "M", code: "2" },
+  { id: "L", name: "L", code: "3" }
 ];
 
-const combinationUrls = {
-  "hanao_1_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_1_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_1_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_2_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_2_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_2_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_3_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_3_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_3_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_4_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_4_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_4_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_5_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_5_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_5_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_6_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_6_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_6_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_7_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_7_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_7_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_8_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_8_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_8_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_9_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_9_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_9_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_10_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_10_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_10_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_11_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_11_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_11_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_12_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_12_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_12_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_13_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_13_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_13_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_14_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_14_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_14_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_15_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_15_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_15_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_16_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_16_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_16_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_17_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_17_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_17_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_18_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_18_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_18_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_19_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_19_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_19_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_20_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_20_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_20_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_21_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_21_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_21_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_22_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_22_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_22_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_23_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_23_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_23_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_24_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_24_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_24_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_25_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_25_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_25_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_26_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_26_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_26_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_27_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_27_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_27_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_28_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_28_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_28_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_29_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_29_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_29_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_30_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_30_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_30_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_31_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_31_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_31_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_32_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_32_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_32_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_33_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_33_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_33_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_34_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_34_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_34_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_35_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_35_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_35_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_36_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_36_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_36_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_37_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_37_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_37_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_38_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_38_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_38_dai_01_L": "https://www.rakuten.co.jp/",
-  "hanao_39_dai_01_S": "https://www.rakuten.co.jp/",
-  "hanao_39_dai_01_M": "https://www.rakuten.co.jp/",
-  "hanao_39_dai_01_L": "https://www.rakuten.co.jp/"
+const daiCodeMap = {
+  "dai_1": "6081",
+  "dai_2": "6192",
+  "dai_3": "5938",
+  "dai_4": "5985",
+  "dai_6": "6046",
+  "dai_7": "6009",
+  "dai_8": "6108",
+  "dai_13": "6058",
+  "dai_14": "6029",
+  "dai_15": "6171",
+  "dai_20": "5988",
+  "dai_21": "5993",
+  "dai_9": "5991",
+  "dai_10": "6001",
+  "dai_11": "6163",
+  "dai_12": "6195",
+  "dai_22": "5990",
+  "dai_23": "6047",
+  "dai_40": "6129",
+  "dai_16": "6026",
+  "dai_17": "6036",
+  "dai_19": "6095",
+  "dai_38": "6015",
+  "dai_18": "6161",
+  "dai_24": "6102",
+  "dai_25": "6170",
+  "dai_26": "6038",
+  "dai_27": "6035",
+  "dai_28": "6021",
+  "dai_29": "6189",
+  "dai_30": "6105",
+  "dai_31": "6044",
+  "dai_32": "5977",
+  "dai_33": "6089",
+  "dai_34": "6043",
+  "dai_5": "6008",
+  "dai_35": "6024",
+  "dai_36": "6139",
+  "dai_37": "6153",
+  "dai_39": "5955"
 };
 
-const fallbackUrl = "https://www.rakuten.co.jp/";
+const rakutenItemUrl = "https://item.rakuten.co.jp/yamako-02/td35eb6494/";
+
+hanaoItems.sort((a, b) => a.rank - b.rank);
+daiItems.sort((a, b) => a.rank - b.rank);
+sokoItems.sort((a, b) => a.rank - b.rank);
 
 let selectedHanao = hanaoItems[0].id;
 let selectedDai = daiItems[0].id;
+let selectedSoko = sokoItems[0].id;
 let selectedSize = sizeItems[0].id;
+
 let currentFilter = "all";
+let currentDaiFilter = "all";
+
 let showAll = false;
+let showAllDai = false;
+
 const initialVisibleCount = 6;
+const initialVisibleCountDai = 6;
 
 function getFilteredHanaoItems() {
-  if (currentFilter === "all") {
-    return hanaoItems;
-  }
+  if (currentFilter === "all") return hanaoItems;
   return hanaoItems.filter(item => item.category.includes(currentFilter));
+}
+
+function getFilteredDaiItems() {
+  if (currentDaiFilter === "all") return daiItems;
+  return daiItems.filter(item => item.category.includes(currentDaiFilter));
 }
 
 function renderHanaoItems() {
@@ -436,9 +209,8 @@ function renderHanaoItems() {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "thumb-button";
-    if (item.id === selectedHanao) {
-      button.classList.add("selected");
-    }
+
+    if (item.id === selectedHanao) button.classList.add("selected");
 
     const tagsHtml = item.categoryLabel
       .map(label => `<span class="thumb-tag">${label}</span>`)
@@ -450,10 +222,7 @@ function renderHanaoItems() {
       <div class="thumb-tags">${tagsHtml}</div>
     `;
 
-    button.addEventListener("click", function () {
-      changeHanao(item.id);
-    });
-
+    button.onclick = () => changeHanao(item.id);
     grid.appendChild(button);
   });
 
@@ -467,25 +236,53 @@ function renderHanaoItems() {
 
 function renderDaiItems() {
   const grid = document.getElementById("dai-grid");
+  const moreButton = document.getElementById("more-button-dai");
+  const filteredItems = getFilteredDaiItems();
+  const visibleItems = showAllDai ? filteredItems : filteredItems.slice(0, initialVisibleCountDai);
+
   grid.innerHTML = "";
 
-  daiItems.forEach(item => {
+  visibleItems.forEach(item => {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = "thumb-button";
-    if (item.id === selectedDai) {
-      button.classList.add("selected");
-    }
+    button.className = `thumb-button dai-button dai-${item.category[0]}`;
+
+    if (item.id === selectedDai) button.classList.add("selected");
 
     button.innerHTML = `
       <img src="${item.image}" alt="${item.name}">
+      <span class="dai-name">${item.name}</span>
+    `;
+
+    button.onclick = () => changeDai(item.id);
+    grid.appendChild(button);
+  });
+
+  if (filteredItems.length > initialVisibleCountDai) {
+    moreButton.style.display = "inline-block";
+    moreButton.textContent = showAllDai ? "表示を減らす" : "もっと見る";
+  } else {
+    moreButton.style.display = "none";
+  }
+}
+
+function renderSokoItems() {
+  const grid = document.getElementById("soko-grid");
+  grid.innerHTML = "";
+
+  sokoItems.forEach(item => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `thumb-button soko-button soko-${item.colorClass}`;
+
+    if (item.id === selectedSoko) button.classList.add("selected");
+
+    button.innerHTML = `
+      <span class="soko-color-chip"></span>
       <span>${item.name}</span>
     `;
 
-    button.addEventListener("click", function () {
-      changeDai(item.id);
-    });
-
+    button.onclick = () => changeSoko(item.id);
     grid.appendChild(button);
   });
 }
@@ -499,25 +296,20 @@ function renderSizeItems() {
     button.type = "button";
     button.className = "thumb-button";
 
-    if (item.id === selectedSize) {
-      button.classList.add("selected");
-    }
+    if (item.id === selectedSize) button.classList.add("selected");
 
     button.innerHTML = `<span>${item.name}</span>`;
-
-    button.addEventListener("click", function () {
-      changeSize(item.id);
-    });
+    button.onclick = () => changeSize(item.id);
 
     grid.appendChild(button);
   });
 }
 
 function changeHanao(id) {
-  const item = hanaoItems.find(hanao => hanao.id === id);
+  selectedHanao = id;
+  const item = hanaoItems.find(i => i.id === id);
   if (!item) return;
 
-  selectedHanao = item.id;
   document.getElementById("hanao").src = item.image;
   renderHanaoItems();
   updateSelection();
@@ -525,12 +317,23 @@ function changeHanao(id) {
 }
 
 function changeDai(id) {
-  const item = daiItems.find(dai => dai.id === id);
+  selectedDai = id;
+  const item = daiItems.find(i => i.id === id);
   if (!item) return;
 
-  selectedDai = item.id;
   document.getElementById("dai").src = item.image;
   renderDaiItems();
+  updateSelection();
+  updateBuyLink();
+}
+
+function changeSoko(id) {
+  selectedSoko = id;
+  const item = sokoItems.find(i => i.id === id);
+  if (!item) return;
+
+  document.getElementById("soko").src = item.image;
+  renderSokoItems();
   updateSelection();
   updateBuyLink();
 }
@@ -546,7 +349,7 @@ function filterHanao(category, buttonEl) {
   currentFilter = category;
   showAll = false;
 
-  document.querySelectorAll(".filter-button").forEach(button => {
+  document.querySelectorAll(".selector-block:nth-of-type(1) .filter-button").forEach(button => {
     button.classList.remove("active");
   });
 
@@ -554,33 +357,110 @@ function filterHanao(category, buttonEl) {
   renderHanaoItems();
 }
 
+function filterDai(category, buttonEl) {
+  currentDaiFilter = category;
+  showAllDai = false;
+
+  document.querySelectorAll(".selector-block:nth-of-type(2) .filter-button").forEach(button => {
+    button.classList.remove("active");
+  });
+
+  buttonEl.classList.add("active");
+  renderDaiItems();
+}
+
 function showMoreHanao() {
   showAll = !showAll;
   renderHanaoItems();
 }
 
+function showMoreDai() {
+  showAllDai = !showAllDai;
+  renderDaiItems();
+}
+
+function generateProductCode() {
+  const hanao = hanaoItems.find(i => i.id === selectedHanao);
+  const dai = daiItems.find(i => i.id === selectedDai);
+  const soko = sokoItems.find(i => i.id === selectedSoko);
+  const size = sizeItems.find(i => i.id === selectedSize);
+
+  if (!hanao || !dai || !soko || !size) return "";
+
+  const hanaoNum = String(hanao.rank).padStart(2, "0");
+  const daiCode = daiCodeMap[dai.id] || "";
+  const sokoNum = String(soko.rank);
+  const sizeNum = size.code;
+
+  return `${hanaoNum}${daiCode}${sokoNum}${sizeNum}`;
+}
+
 function updateSelection() {
-  const selectedHanaoItem = hanaoItems.find(item => item.id === selectedHanao);
-  const selectedDaiItem = daiItems.find(item => item.id === selectedDai);
+  const hanao = hanaoItems.find(i => i.id === selectedHanao);
+  const dai = daiItems.find(i => i.id === selectedDai);
+  const soko = sokoItems.find(i => i.id === selectedSoko);
+  const code = generateProductCode();
 
   document.getElementById("current-selection").innerText =
-    "鼻緒：" + selectedHanaoItem.name +
-    " / 台：" + selectedDaiItem.name +
-    " / サイズ：" + selectedSize;
+    `鼻緒：${hanao ? hanao.name : ""} / 天生地：${dai ? dai.name : ""} / 台：${soko ? soko.name : ""} / サイズ：${selectedSize}`;
+
+  const productCodeEl = document.getElementById("product-code");
+  if (productCodeEl) {
+    productCodeEl.innerText = `品番：${code}`;
+  }
+}
+
+async function copyTextToClipboard(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch (error) {
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.style.position = "fixed";
+    textarea.style.left = "-9999px";
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+
+    let success = false;
+    try {
+      success = document.execCommand("copy");
+    } catch (e) {
+      success = false;
+    }
+
+    document.body.removeChild(textarea);
+    return success;
+  }
 }
 
 function updateBuyLink() {
-  const key = `${selectedHanao}_${selectedDai}_${selectedSize}`;
-  const buyLink = document.getElementById("buy-link");
+  const link = document.getElementById("buy-link");
+  if (!link) return;
 
-  if (!buyLink) return;
+  link.href = rakutenItemUrl;
 
-  buyLink.href = combinationUrls[key] || fallbackUrl;
+  link.onclick = async function(e) {
+    e.preventDefault();
+
+    const code = generateProductCode();
+    const copied = await copyTextToClipboard(code);
+
+    if (copied) {
+      alert(`コピーしました：${code}`);
+    } else {
+      alert(`品番はこちらです：${code}\nコピーできない場合は手動でコピーしてください。`);
+    }
+
+    window.open(rakutenItemUrl, "_blank", "noopener");
+  };
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   renderHanaoItems();
   renderDaiItems();
+  renderSokoItems();
   renderSizeItems();
   updateSelection();
   updateBuyLink();
