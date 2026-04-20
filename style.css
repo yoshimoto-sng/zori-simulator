@@ -561,6 +561,14 @@ body {
     height: 72px;
   }
 
+  #hanao-grid .thumb-button img {
+    object-fit: contain;
+    object-position: center top;
+    height: 110px;
+    padding: 4px 8px 0;
+    margin-bottom: 6px;
+  }
+
   .filter-button,
   .buy-btn {
     width: 100%;
