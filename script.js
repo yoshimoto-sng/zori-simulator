@@ -119,9 +119,9 @@ const sokoItems = [
 ];
 
 const sizeItems = [
-  { id: "S", name: "S", code: "1" },
-  { id: "M", name: "M", code: "2" },
-  { id: "L", name: "L", code: "3" }
+  { id: "S", name: "S" },
+  { id: "M", name: "M" },
+  { id: "L", name: "L" }
 ];
 
 const daiCodeMap = {
@@ -387,12 +387,12 @@ function generateProductCode() {
 
   if (!hanao || !dai || !soko || !size) return "";
 
-  const hanaoNum = String(hanao.rank).padStart(2, "0");
   const daiCode = daiCodeMap[dai.id] || "";
+  const sizeCode = size.id; // S / M / L
+  const hanaoNum = String(hanao.rank).padStart(2, "0");
   const sokoNum = String(soko.rank);
-  const sizeNum = size.code;
 
-  return `${hanaoNum}${daiCode}${sokoNum}${sizeNum}`;
+  return `${daiCode}${sizeCode}${hanaoNum}${sokoNum}`;
 }
 
 function updateSelection() {
