@@ -434,6 +434,26 @@ function filterHanao(category, buttonEl) {
   renderHanaoItems();
 }
 
+
+function filterHanaoFromSelect(category) {
+  if (!category) return;
+
+  currentFilter = category;
+  showAll = false;
+
+  document.querySelectorAll(".selector-block:nth-of-type(1) .filter-button").forEach(button => {
+    button.classList.remove("active");
+
+    const onclickText = button.getAttribute("onclick") || "";
+
+    if (onclickText.includes(`filterHanao('${category}'`)) {
+      button.classList.add("active");
+    }
+  });
+
+  renderHanaoItems();
+}
+
 function filterDai(category, buttonEl) {
   currentDaiFilter = category;
   showAllDai = false;
@@ -443,6 +463,26 @@ function filterDai(category, buttonEl) {
   });
 
   buttonEl.classList.add("active");
+  renderDaiItems();
+}
+
+
+function filterDaiFromSelect(category) {
+  if (!category) return;
+
+  currentDaiFilter = category;
+  showAllDai = false;
+
+  document.querySelectorAll(".selector-block:nth-of-type(2) .filter-button").forEach(button => {
+    button.classList.remove("active");
+
+    const onclickText = button.getAttribute("onclick") || "";
+
+    if (onclickText.includes(`filterDai('${category}'`)) {
+      button.classList.add("active");
+    }
+  });
+
   renderDaiItems();
 }
 
