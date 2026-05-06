@@ -478,15 +478,26 @@ function updateSelection() {
   const soko = sokoItems.find(i => i.id === selectedSoko);
   const code = generateProductCode();
 
-  document.getElementById("current-selection").innerText =
-    `鼻緒：${hanao ? hanao.name : ""} / 天生地：${dai ? dai.name : ""} / 台：${soko ? soko.name : ""} / サイズ：${selectedSize}`;
+  const isMobile = window.innerWidth <= 520;
+
+  if (isMobile) {
+    document.getElementById("current-selection").innerText =
+      `鼻緒：${hanao ? hanao.name : ""} / 天生地：${dai ? dai.name : ""} / 台：${soko ? soko.name : ""} / サイズ：${selectedSize} / 品番：${code}`;
+  } else {
+    document.getElementById("current-selection").innerText =
+      `鼻緒：${hanao ? hanao.name : ""} / 天生地：${dai ? dai.name : ""} / 台：${soko ? soko.name : ""} / サイズ：${selectedSize}`;
+  }
 
   const productCodeEl = document.getElementById("product-code");
   if (productCodeEl) {
-    productCodeEl.innerText = `品番：${code}`;
+    if (isMobile) {
+      productCodeEl.style.display = "none";
+    } else {
+      productCodeEl.style.display = "block";
+      productCodeEl.innerText = `品番：${code}`;
+    }
   }
 }
-
 async function copyTextToClipboard(text) {
   try {
     await navigator.clipboard.writeText(text);
