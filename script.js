@@ -576,9 +576,17 @@ function updateBuyLink() {
     const copied = await copyTextToClipboard(code);
 
     if (copied) {
-      alert(`コピーしました：${code}`);
+      if (window.innerWidth <= 520) {
+        alert(`品番をコピーしました。
+
+楽天ページの「購入手続きへ」から、
+入力欄へ貼り付けてください。`);
+      } else {
+        alert(`コピーしました：${code}`);
+      }
     } else {
-      alert(`品番はこちらです：${code}\nコピーできない場合は手動でコピーしてください。`);
+      alert(`品番はこちらです：${code}
+コピーできない場合は手動でコピーしてください。`);
     }
 
     window.open(rakutenItemUrl, "_blank", "noopener");
