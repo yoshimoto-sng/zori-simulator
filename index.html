@@ -34,8 +34,17 @@
         <div class="selector-block">
           <div class="selector-header">
             <h2>鼻緒を選ぶ</h2>
-            <p class="selector-subtext">カテゴリから絞り込んで選べます</p>
           </div>
+
+          <select id="hanao-filter-select" class="mobile-hanao-select" onchange="filterHanaoFromSelect(this.value)">
+            <option value="" selected disabled>▼ 雰囲気で絞り込む</option>
+            <option value="gorgeous">華やか</option>
+            <option value="elegant">上品</option>
+            <option value="simple">シンプル</option>
+            <option value="cute">かわいい</option>
+            <option value="calm">落ち着き</option>
+            <option value="all">すべて</option>
+          </select>
 
           <div class="filter-bar">
             <button type="button" class="filter-button active" onclick="filterHanao('all', this)">すべて</button>
@@ -58,6 +67,21 @@
             <h2>「天」生地を選ぶ</h2>
             <p class="selector-subtext">足を乗せていただくところの生地</p>
           </div>
+
+          <select id="dai-filter-select" class="mobile-dai-select" onchange="filterDaiFromSelect(this.value)">
+            <option value="" selected disabled>▼ 色で絞り込む</option>
+            <option value="black">⚫ 黒系</option>
+            <option value="white">⚪ 白系</option>
+            <option value="gray">⬜ グレー系</option>
+            <option value="beige">🟤 ベージュ系</option>
+            <option value="red">🔴 赤系</option>
+            <option value="orange">🟠 オレンジ系</option>
+            <option value="brown">🟫 ブラウン系</option>
+            <option value="pink">🩷 ピンク系</option>
+            <option value="blue">🔵 青系</option>
+            <option value="green">🟢 緑系</option>
+            <option value="all">すべて</option>
+          </select>
 
           <div class="filter-bar">
             <button type="button" class="filter-button filter-dai-all active" onclick="filterDai('all', this)">すべて</button>
