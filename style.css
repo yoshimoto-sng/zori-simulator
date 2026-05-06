@@ -563,8 +563,8 @@ body {
 
   /* 天生地を大型化 */
   .selector-grid-dai img {
-    height: 120px;
-    object-fit: contain;
+    height: 128px;
+    object-fit: cover;
     object-position: center center;
     padding: 2px;
   }
@@ -572,19 +572,109 @@ body {
   /* 鼻緒画像の余白削減 */
   #hanao-grid .thumb-button img {
     object-fit: cover;
-    object-position: center;
-    height: 180px;
+    object-position: center 42%;
+    height: 150px;
     padding: 2px;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
   }
 
-  .filter-button,
-  .buy-btn {
+  .selector-block:nth-of-type(2) .filter-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
     width: 100%;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+    gap: 8px;
   }
 
-  .selector-block,
-  .purchase-note {
-    scroll-margin-top: 140px;
+  .selector-block:nth-of-type(2) .filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .selector-block:nth-of-type(2) .filter-button {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: auto;
+    white-space: nowrap;
+  }
+
+  .selector-block:nth-of-type(2) .filter-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+    gap: 8px;
+    padding-bottom: 6px;
+  }
+
+  .selector-block:nth-of-type(2) .filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .selector-block:nth-of-type(2) .filter-button {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: auto;
+    white-space: nowrap;
+  }
+
+  /* 他は元のまま */
+  .filter-bar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.filter-button {
+  width: 100%;
+  padding: 10px 8px;
+  font-size: 13px;
+}
+
+.buy-btn {
+  width: 100%;
+}
+}
+
+
+.mobile-hanao-select,
+.mobile-dai-select {
+  display: none;
+}
+
+@media (max-width: 520px) {
+  .mobile-hanao-select,
+  .mobile-dai-select {
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--text);
+  }
+
+  .selector-block:nth-of-type(1) .filter-bar,
+  .selector-block:nth-of-type(2) .filter-bar {
+    display: none;
+  }
+}
+
+/* 天生地スマホ表示：迫力を残しつつ切れを軽減 */
+@media (max-width: 520px) {
+  .selector-grid-dai img {
+    height: 128px;
+    object-fit: cover;
+    object-position: center center;
+    padding: 2px;
   }
 }
