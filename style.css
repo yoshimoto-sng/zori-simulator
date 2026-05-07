@@ -678,3 +678,49 @@ body {
     padding: 2px;
   }
 }
+
+.copy-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%) translateY(20px);
+  max-width: min(92vw, 420px);
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: rgba(34, 34, 34, 0.92);
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.7;
+  text-align: center;
+  white-space: pre-line;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.copy-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 520px) {
+  .copy-toast {
+    bottom: 18px;
+    font-size: 13px;
+    padding: 12px 14px;
+  }
+}
+
+/* 表示高速化：画面外の選択ブロック描画を軽量化 */
+@supports (content-visibility: auto) {
+  .selector-block {
+    content-visibility: auto;
+    contain-intrinsic-size: 400px;
+  }
+
+  .preview-section {
+    content-visibility: visible;
+  }
+}
