@@ -5,54 +5,54 @@ const sokoExt = "png";
 /* ===== 鼻緒データ ===== */
 const hanaoItems = [
   { id: "hanao_1", name: "蔓小花(ピンク)", image: `./images/hanao/1.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 1 },
-  { id: "hanao_7", name: "蔓小花(ブルー)", image: `./images/hanao/7.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 2 },
+  { id: "hanao_7", name: "蔓小花(ブルー)", image: `./images/hanao/7.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 2 },
   { id: "hanao_11", name: "蔓小花(パープル)", image: `./images/hanao/11.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 3 },
 
   { id: "hanao_2", name: "かすれ格子(ブルー)", image: `./images/hanao/2.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 4 },
-  { id: "hanao_4", name: "かすれ格子(アズキ)", image: `./images/hanao/4.${hanaoExt}`, category: ["simple"], categoryLabel: ["シンプル"], rank: 5 },
+  { id: "hanao_4", name: "かすれ格子(アズキ)", image: `./images/hanao/4.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 5 },
 
-  { id: "hanao_5", name: "やわらぎ織り(グリーン)", image: `./images/hanao/5.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 6 },
-  { id: "hanao_14", name: "やわらぎ織り(パープル)", image: `./images/hanao/14.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 7 },
+  { id: "hanao_5", name: "やわらぎ織り(グリーン)", image: `./images/hanao/5.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 6 },
+  { id: "hanao_14", name: "やわらぎ織り(パープル)", image: `./images/hanao/14.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 7 },
   { id: "hanao_15", name: "やわらぎ織り(ライトブルー)", image: `./images/hanao/15.${hanaoExt}`, category: ["simple"], categoryLabel: ["シンプル"], rank: 8 },
 
   { id: "hanao_22", name: "結花(ベージュ)", image: `./images/hanao/22.${hanaoExt}`, category: ["gorgeous"], categoryLabel: ["華やか"], rank: 9 },
   { id: "hanao_27", name: "結花(ブルー)", image: `./images/hanao/27.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 10 },
   { id: "hanao_28", name: "結花(グリーン)", image: `./images/hanao/28.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 11 },
 
-  { id: "hanao_23", name: "和らぎ結び(ベージュ)", image: `./images/hanao/23.${hanaoExt}`, category: ["gorgeous"], categoryLabel: ["華やか"], rank: 12 },
+  { id: "hanao_23", name: "和らぎ結び(ベージュ)", image: `./images/hanao/23.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 12 },
   { id: "hanao_25", name: "和らぎ結び(ピンク)", image: `./images/hanao/25.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 13 },
   { id: "hanao_29", name: "和らぎ結び(ワイン)", image: `./images/hanao/29.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 14 },
 
   { id: "hanao_33", name: "透かし織り(ブラウン)", image: `./images/hanao/33.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 15 },
-  { id: "hanao_34", name: "透かし織り(シルバー)", image: `./images/hanao/34.${hanaoExt}`, category: ["gorgeous"], categoryLabel: ["華やか"], rank: 16 },
-  { id: "hanao_36", name: "透かし織り", image: `./images/hanao/36.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 17 },
+  { id: "hanao_34", name: "透かし織り(シルバー)", image: `./images/hanao/34.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 16 },
+  { id: "hanao_36", name: "透かし織り", image: `./images/hanao/36.${hanaoExt}`, category: ["gorgeous"], categoryLabel: ["華やか"], rank: 17 },
 
-  { id: "hanao_37", name: "宵透(ネイビー)", image: `./images/hanao/37.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 18 },
+  { id: "hanao_37", name: "宵透(ネイビー)", image: `./images/hanao/37.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 18 },
   { id: "hanao_38", name: "宵透(ブラック)", image: `./images/hanao/38.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 19 },
 
-  { id: "hanao_3", name: "金彩麻の葉", image: `./images/hanao/3.${hanaoExt}`, category: ["simple"], categoryLabel: ["シンプル"], rank: 20 },
-  { id: "hanao_13", name: "銀彩麻の葉", image: `./images/hanao/13.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 21 },
+  { id: "hanao_3", name: "金彩麻の葉", image: `./images/hanao/3.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 20 },
+  { id: "hanao_13", name: "銀彩麻の葉", image: `./images/hanao/13.${hanaoExt}`, category: ["simple"], categoryLabel: ["シンプル"], rank: 21 },
 
-  { id: "hanao_6", name: "金彩更紗", image: `./images/hanao/6.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 22 },
-  { id: "hanao_9", name: "銀彩更紗", image: `./images/hanao/9.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 23 },
+  { id: "hanao_6", name: "金彩更紗", image: `./images/hanao/6.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 22 },
+  { id: "hanao_9", name: "銀彩更紗", image: `./images/hanao/9.${hanaoExt}`, category: ["simple"], categoryLabel: ["シンプル"], rank: 23 },
 
   { id: "hanao_10", name: "ストライプ(グリーン)", image: `./images/hanao/10.${hanaoExt}`, category: ["gorgeous"], categoryLabel: ["華やか"], rank: 24 },
   { id: "hanao_12", name: "ストライプ(ピンク)", image: `./images/hanao/12.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 25 },
 
-  { id: "hanao_8", name: "淡縞", image: `./images/hanao/8.${hanaoExt}`, category: ["simple"], categoryLabel: ["シンプル"], rank: 26 },
+  { id: "hanao_8", name: "淡縞", image: `./images/hanao/8.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 26 },
   { id: "hanao_16", name: "白妙", image: `./images/hanao/16.${hanaoExt}`, category: ["simple"], categoryLabel: ["シンプル"], rank: 27 },
-  { id: "hanao_17", name: "白銀", image: `./images/hanao/17.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 28 },
+  { id: "hanao_17", name: "白銀", image: `./images/hanao/17.${hanaoExt}`, category: ["simple"], categoryLabel: ["シンプル"], rank: 28 },
   { id: "hanao_18", name: "深茶", image: `./images/hanao/18.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 29 },
-  { id: "hanao_19", name: "生成", image: `./images/hanao/19.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 30 },
-  { id: "hanao_20", name: "漆黒", image: `./images/hanao/20.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 31 },
+  { id: "hanao_19", name: "生成", image: `./images/hanao/19.${hanaoExt}`, category: ["simple"], categoryLabel: ["シンプル"], rank: 30 },
+  { id: "hanao_20", name: "漆黒", image: `./images/hanao/20.${hanaoExt}`, category: ["simple"], categoryLabel: ["シンプル"], rank: 31 },
 
-  { id: "hanao_21", name: "絢爛花", image: `./images/hanao/21.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 32 },
-  { id: "hanao_24", name: "しらべ花", image: `./images/hanao/24.${hanaoExt}`, category: ["gorgeous"], categoryLabel: ["華やか"], rank: 33 },
-  { id: "hanao_26", name: "優彩花", image: `./images/hanao/26.${hanaoExt}`, category: ["gorgeous"], categoryLabel: ["華やか"], rank: 34 },
-  { id: "hanao_30", name: "深彩花", image: `./images/hanao/30.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 35 },
-  { id: "hanao_31", name: "彩陽花", image: `./images/hanao/31.${hanaoExt}`, category: ["gorgeous"], categoryLabel: ["華やか"], rank: 36 },
+  { id: "hanao_21", name: "絢爛花", image: `./images/hanao/21.${hanaoExt}`, category: ["gorgeous"], categoryLabel: ["華やか"], rank: 32 },
+  { id: "hanao_24", name: "しらべ花", image: `./images/hanao/24.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 33 },
+  { id: "hanao_26", name: "優彩花", image: `./images/hanao/26.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 34 },
+  { id: "hanao_30", name: "深彩花", image: `./images/hanao/30.${hanaoExt}`, category: ["gorgeous"], categoryLabel: ["華やか"], rank: 35 },
+  { id: "hanao_31", name: "彩陽花", image: `./images/hanao/31.${hanaoExt}`, category: ["cute"], categoryLabel: ["かわいい"], rank: 36 },
 
-  { id: "hanao_32", name: "白光織り", image: `./images/hanao/32.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 37 },
+  { id: "hanao_32", name: "白光織り", image: `./images/hanao/32.${hanaoExt}`, category: ["elegant"], categoryLabel: ["上品"], rank: 37 },
   { id: "hanao_35", name: "漆黒織り", image: `./images/hanao/35.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 38 },
   { id: "hanao_39", name: "木陰", image: `./images/hanao/39.${hanaoExt}`, category: ["calm"], categoryLabel: ["落ち着き"], rank: 39 }
 ];
@@ -294,7 +294,7 @@ function renderHanaoItems() {
       .join("");
 
     button.innerHTML = `
-      <img src="${item.image}" alt="${item.name}">
+      <img src="${item.image}" alt="${item.name}" loading="lazy" decoding="async">
       <span>${item.name}</span>
       <div class="thumb-tags">${tagsHtml}</div>
     `;
@@ -327,7 +327,7 @@ function renderDaiItems() {
     if (item.id === selectedDai) button.classList.add("selected");
 
     button.innerHTML = `
-      <img src="${item.image}" alt="${item.name}">
+      <img src="${item.image}" alt="${item.name}" loading="lazy" decoding="async">
       <span class="dai-name">${item.name}</span>
     `;
 
@@ -538,6 +538,24 @@ function updateSelection() {
     }
   }
 }
+function showCopyMessage(message) {
+  let toast = document.getElementById("copy-toast");
+
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.id = "copy-toast";
+    toast.className = "copy-toast";
+    document.body.appendChild(toast);
+  }
+
+  toast.innerText = message;
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 1800);
+}
+
 async function copyTextToClipboard(text) {
   try {
     await navigator.clipboard.writeText(text);
@@ -577,19 +595,21 @@ function updateBuyLink() {
 
     if (copied) {
       if (window.innerWidth <= 520) {
-        alert(`品番をコピーしました。
+        showCopyMessage(`品番をコピーしました。
 
 楽天ページの「購入手続きへ」から、
 入力欄へ貼り付けてください。`);
       } else {
-        alert(`コピーしました：${code}`);
+        showCopyMessage(`コピーしました：${code}`);
       }
     } else {
-      alert(`品番はこちらです：${code}
+      showCopyMessage(`品番はこちらです：${code}
 コピーできない場合は手動でコピーしてください。`);
     }
 
-    window.open(rakutenItemUrl, "_blank", "noopener");
+    setTimeout(() => {
+      window.open(rakutenItemUrl, "_blank", "noopener");
+    }, 700);
   };
 }
 
