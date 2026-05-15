@@ -663,21 +663,7 @@ function updateBuyLink() {
     e.preventDefault();
 
     const code = generateProductCode();
-    const copied = await copyTextToClipboard(code);
-
-    if (copied) {
-      if (window.innerWidth <= 520) {
-        showCopyMessage(`品番をコピーしました。
-
-楽天ページの「購入手続きへ」から、
-入力欄へ貼り付けてください。`);
-      } else {
-        showCopyMessage(`コピーしました：${code}`);
-      }
-    } else {
-      showCopyMessage(`品番はこちらです：${code}
-コピーできない場合は手動でコピーしてください。`);
-    }
+    await copyTextToClipboard(code);
 
     openProductConfirmModal();
   };
