@@ -581,6 +581,78 @@ async function copyTextToClipboard(text) {
   }
 }
 
+function openProductConfirmModal() {
+  let modal = document.getElementById("product-confirm-modal");
+
+  if (!modal) {
+    modal = document.createElement("div");
+    modal.id = "product-confirm-modal";
+    modal.className = "product-confirm-modal";
+    modal.innerHTML = `
+      <div class="product-confirm-box" role="dialog" aria-modal="true" aria-labelledby="product-confirm-title">
+        <p id="product-confirm-title" class="product-confirm-title">この組み合わせで間違いないですか？</p>
+
+        <div class="product-confirm-preview">
+          <img class="product-confirm-soko" src="" alt="草履の台">
+          <img class="product-confirm-dai" src="" alt="草履の天生地">
+          <img class="product-confirm-hanao" src="" alt="草履の鼻緒">
+        </div>
+
+        <div id="product-confirm-selection" class="product-confirm-selection"></div>
+
+        <div class="product-confirm-actions">
+          <button type="button" id="product-confirm-yes" class="product-confirm-button product-confirm-yes">はい</button>
+          <button type="button" id="product-confirm-no" class="product-confirm-button product-confirm-no">いいえ</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    modal.addEventListener("click", event => {
+      if (event.target === modal) {
+        closeProductConfirmModal();
+      }
+    });
+  }
+
+  const hanao = hanaoItems.find(i => i.id === selectedHanao);
+  const dai = daiItems.find(i => i.id === selectedDai);
+  const soko = sokoItems.find(i => i.id === selectedSoko);
+
+  const previewSoko = modal.querySelector(".product-confirm-soko");
+  const previewDai = modal.querySelector(".product-confirm-dai");
+  const previewHanao = modal.querySelector(".product-confirm-hanao");
+  const selectionText = document.getElementById("product-confirm-selection");
+  const yesButton = document.getElementById("product-confirm-yes");
+  const noButton = document.getElementById("product-confirm-no");
+
+  if (previewSoko && soko) previewSoko.src = soko.image;
+  if (previewDai && dai) previewDai.src = dai.image;
+  if (previewHanao && hanao) previewHanao.src = hanao.image;
+
+  if (selectionText) {
+    selectionText.innerText = `鼻緒：${hanao ? hanao.name : ""} / 天生地：${dai ? dai.name : ""} / 台：${soko ? soko.name : ""} / サイズ：${selectedSize}`;
+  }
+
+  yesButton.onclick = () => {
+    closeProductConfirmModal();
+    window.open(rakutenItemUrl, "_blank", "noopener");
+  };
+
+  noButton.onclick = () => {
+    closeProductConfirmModal();
+  };
+
+  modal.classList.add("show");
+}
+
+function closeProductConfirmModal() {
+  const modal = document.getElementById("product-confirm-modal");
+  if (modal) {
+    modal.classList.remove("show");
+  }
+}
+
 function updateBuyLink() {
   const link = document.getElementById("buy-link");
   if (!link) return;
@@ -607,11 +679,16 @@ function updateBuyLink() {
 コピーできない場合は手動でコピーしてください。`);
     }
 
-    setTimeout(() => {
-      window.open(rakutenItemUrl, "_blank", "noopener");
-    }, 700);
+    openProductConfirmModal();
   };
 }
+
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
+    closeProductConfirmModal();
+  }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   updateHanaoFilterCounts();
