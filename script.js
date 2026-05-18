@@ -274,6 +274,76 @@ function updateDaiFilterCounts() {
   });
 }
 
+
+function updateHanaoSelectCounts() {
+  const select = document.getElementById("hanao-filter-select");
+  if (!select) return;
+
+  const countMap = {
+    all: hanaoItems.length,
+    gorgeous: hanaoItems.filter(item => item.category.includes("gorgeous")).length,
+    elegant: hanaoItems.filter(item => item.category.includes("elegant")).length,
+    simple: hanaoItems.filter(item => item.category.includes("simple")).length,
+    cute: hanaoItems.filter(item => item.category.includes("cute")).length,
+    calm: hanaoItems.filter(item => item.category.includes("calm")).length
+  };
+
+  const labelMap = {
+    all: "すべて",
+    gorgeous: "華やか",
+    elegant: "上品",
+    simple: "シンプル",
+    cute: "かわいい",
+    calm: "落ち着き"
+  };
+
+  Array.from(select.options).forEach(option => {
+    const value = option.value;
+    if (!value || !countMap[value]) return;
+    option.textContent = `${labelMap[value]}(${countMap[value]})`;
+  });
+}
+
+function updateDaiSelectCounts() {
+  const select = document.getElementById("dai-filter-select");
+  if (!select) return;
+
+  const countMap = {
+    all: daiItems.length,
+    black: daiItems.filter(item => item.category.includes("black")).length,
+    white: daiItems.filter(item => item.category.includes("white")).length,
+    gray: daiItems.filter(item => item.category.includes("gray")).length,
+    beige: daiItems.filter(item => item.category.includes("beige")).length,
+    red: daiItems.filter(item => item.category.includes("red")).length,
+    orange: daiItems.filter(item => item.category.includes("orange")).length,
+    brown: daiItems.filter(item => item.category.includes("brown")).length,
+    pink: daiItems.filter(item => item.category.includes("pink")).length,
+    blue: daiItems.filter(item => item.category.includes("blue")).length,
+    green: daiItems.filter(item => item.category.includes("green")).length
+  };
+
+  const labelMap = {
+    all: "すべて",
+    black: "黒系",
+    white: "白系",
+    gray: "グレー系",
+    beige: "ベージュ系",
+    red: "赤系",
+    orange: "オレンジ系",
+    brown: "ブラウン系",
+    pink: "ピンク系",
+    blue: "青系",
+    green: "緑系"
+  };
+
+  Array.from(select.options).forEach(option => {
+    const value = option.value;
+    if (!value || !countMap[value]) return;
+    option.textContent = `${labelMap[value]}(${countMap[value]})`;
+  });
+}
+
+
 function renderHanaoItems() {
   const grid = document.getElementById("hanao-grid");
   const moreButton = document.getElementById("more-button");
@@ -679,6 +749,8 @@ document.addEventListener("keydown", event => {
 document.addEventListener("DOMContentLoaded", () => {
   updateHanaoFilterCounts();
   updateDaiFilterCounts();
+  updateHanaoSelectCounts();
+  updateDaiSelectCounts();
   renderHanaoItems();
   renderDaiItems();
   renderSokoItems();
