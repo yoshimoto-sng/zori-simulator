@@ -592,10 +592,10 @@ function updateSelection() {
 
   if (isMobile) {
     document.getElementById("current-selection").innerText =
-      `鼻緒：${hanao ? hanao.name : ""} / 天生地：${dai ? dai.name : ""} / 台：${soko ? soko.name : ""} / サイズ：${selectedSize} / 品番：${code}`;
+      `鼻緒：${hanao ? hanao.name : ""} / 足乗せ：${dai ? dai.name : ""} / 側面の色：${soko ? soko.name : ""} / サイズ：${selectedSize} / 品番：${code}`;
   } else {
     document.getElementById("current-selection").innerText =
-      `鼻緒：${hanao ? hanao.name : ""} / 天生地：${dai ? dai.name : ""} / 台：${soko ? soko.name : ""} / サイズ：${selectedSize}`;
+      `鼻緒：${hanao ? hanao.name : ""} / 足乗せ：${dai ? dai.name : ""} / 側面の色：${soko ? soko.name : ""} / サイズ：${selectedSize}`;
   }
 
   const productCodeEl = document.getElementById("product-code");
@@ -664,7 +664,7 @@ function openProductConfirmModal() {
 
         <div class="product-confirm-preview">
           <img class="product-confirm-soko" src="" alt="草履の台">
-          <img class="product-confirm-dai" src="" alt="草履の天生地">
+          <img class="product-confirm-dai" src="" alt="草履の足乗せ">
           <img class="product-confirm-hanao" src="" alt="草履の鼻緒">
         </div>
 
@@ -701,7 +701,7 @@ function openProductConfirmModal() {
   if (previewHanao && hanao) previewHanao.src = hanao.image;
 
   if (selectionText) {
-    selectionText.innerText = `鼻緒：${hanao ? hanao.name : ""} / 天生地：${dai ? dai.name : ""} / 台：${soko ? soko.name : ""} / サイズ：${selectedSize}`;
+    selectionText.innerText = `鼻緒：${hanao ? hanao.name : ""} / 足乗せ：${dai ? dai.name : ""} / 側面の色：${soko ? soko.name : ""} / サイズ：${selectedSize}`;
   }
 
   yesButton.onclick = () => {
