@@ -167,7 +167,7 @@ const daiCodeMap = {
   "dai_39": "5955"
 };
 
-const rakutenItemUrl = "https://item.rakuten.co.jp/yamako-02/td65eo6494/";
+const rakutenItemUrl = "https://item.rakuten.co.jp/yamako-02/td65eo6494/#rakutenLimitedId_cart";
 
 hanaoItems.sort((a, b) => a.rank - b.rank);
 daiItems.sort((a, b) => a.rank - b.rank);
