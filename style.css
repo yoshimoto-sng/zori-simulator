@@ -849,3 +849,207 @@ body {
     font-size: 13px;
   }
 }
+
+/* =========================================================
+   レスポンシブ調整 2026-05
+   PC / タブレット横 / タブレット縦 / スマホを分けて最適化
+   ========================================================= */
+
+/* 大きめPCでは余白を活かしつつ、プレビューを見やすくする */
+@media (min-width: 1181px) {
+  .preview {
+    max-width: 600px;
+  }
+}
+
+/* タブレット横：iPad 7th 横 1024px など。2カラムを維持し、プレビュー側を広めにする */
+@media (min-width: 981px) and (max-width: 1180px) {
+  .page {
+    max-width: 100%;
+    padding: 18px 14px 40px;
+  }
+
+  .hero {
+    margin-bottom: 18px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .lead {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .simulator {
+    grid-template-columns: minmax(520px, 1.35fr) minmax(360px, 0.9fr);
+    gap: 16px;
+  }
+
+  .preview-section {
+    top: 12px;
+    padding: 16px;
+  }
+
+  .preview {
+    max-width: min(100%, 620px);
+  }
+
+  #current-selection {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .product-code {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .selector-section {
+    gap: 14px;
+  }
+
+  .selector-block,
+  .purchase-note {
+    padding: 16px;
+  }
+
+  .selector-header h2 {
+    font-size: 19px;
+  }
+
+  .filter-bar {
+    gap: 6px;
+  }
+
+  .filter-button {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+  .selector-grid {
+    gap: 10px;
+  }
+
+  .thumb-button img {
+    height: 125px;
+    padding: 6px;
+  }
+
+  .selector-grid-dai img {
+    height: 78px;
+  }
+}
+
+/* タブレット縦：iPad 7th 縦 768px など。プレビューを横長コンパクトにして選択肢を隠しすぎない */
+@media (min-width: 521px) and (max-width: 980px) {
+  .page {
+    padding: 16px 14px 40px;
+  }
+
+  .hero {
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .lead {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .simulator {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .preview-section {
+    top: 8px;
+    padding: 14px;
+    border-radius: 20px;
+  }
+
+  .preview {
+    width: min(100%, 620px);
+    max-width: 620px;
+    aspect-ratio: 16 / 9;
+    max-height: 300px;
+  }
+
+  .preview img {
+    object-fit: contain;
+    transform: scale(1.08);
+  }
+
+  #current-selection {
+    margin-top: 10px;
+    padding: 9px 10px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .product-code {
+    margin-top: 8px;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .selector-section {
+    gap: 16px;
+  }
+
+  .selector-block,
+  .purchase-note {
+    padding: 18px;
+  }
+
+  .selector-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .selector-grid-dai {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .selector-grid-soko {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .selector-grid-size {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .thumb-button img {
+    height: 120px;
+    padding: 6px;
+  }
+
+  .selector-grid-dai img {
+    height: 95px;
+    object-fit: contain;
+  }
+
+  .filter-button {
+    padding: 8px 11px;
+    font-size: 13px;
+  }
+}
+
+/* 小型スマホは既存のスマホUIを尊重しつつ、縦長になりすぎないよう微調整 */
+@media (max-width: 520px) {
+  .preview {
+    height: auto;
+  }
+
+  .selector-block,
+  .purchase-note {
+    padding: 16px;
+  }
+}
