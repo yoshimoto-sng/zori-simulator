@@ -1106,3 +1106,12 @@ body {
     padding: 12px 10px;
   }
 }
+
+
+/* ===== スマホ上部固定プレビュー：枠サイズはそのまま、組み合わせ画像だけ拡大 ===== */
+@media (max-width: 520px) {
+  .preview img {
+    transform: scale(1.32);
+    transform-origin: center center;
+  }
+}
