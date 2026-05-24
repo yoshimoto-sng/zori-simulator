@@ -1115,3 +1115,54 @@ body {
     transform-origin: center center;
   }
 }
+
+
+/* ===== タブレット横画面：確認モーダルのボタン見切れ防止 ===== */
+@media (min-width: 981px) and (max-width: 1180px) and (orientation: landscape) {
+  .product-confirm-modal {
+    padding: 12px;
+    align-items: center;
+  }
+
+  .product-confirm-box {
+    width: min(72vw, 520px);
+    max-height: 88vh;
+    padding: 14px;
+    overflow-y: auto;
+  }
+
+  .product-confirm-title {
+    margin-bottom: 8px;
+    font-size: 17px;
+  }
+
+  .product-confirm-preview {
+    aspect-ratio: 1 / 1;
+    max-height: 260px;
+    margin-bottom: 8px;
+  }
+
+  .product-confirm-preview img {
+    transform: scale(1.14);
+  }
+
+  .product-confirm-selection {
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .product-confirm-actions {
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    padding-top: 8px;
+    gap: 10px;
+  }
+
+  .product-confirm-button {
+    min-width: 110px;
+    padding: 11px 18px;
+  }
+}
